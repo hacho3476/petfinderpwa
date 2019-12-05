@@ -1,0 +1,210 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A sample pwa weather app" />
+    <meta name="theme-color" content="#2F3BA2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetFinder</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/4d51b0c0-be32-4c64-b4f6-1f636ebcfef4%2Ffavicon.ico?v=1575392834525"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Weather PWA" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+  </head>
+  <body>
+    <div id="app-template">
+      <div class="grid-container">
+        <div id="header" class="header">
+          <b>PetFinder</b>
+          <select id="animal" class="categories">
+            <option id="dog" value="dog" class="options">dog</option>
+            <option id="cat" value="cat" class="options">cat</option>
+            <option value="bird" class="options">bird</option>
+            <option value="rabbit" class="options">rabbit</option>
+          </select>
+          <button id="search" onclick="getInformation()">
+            Search!
+          </button>
+          <button onclick="previousPage()">
+            Previous page
+          </button>
+          <button onclick="nextPage()">
+            Next page
+          </button>
+        </div>
+
+        <div class="first grid">
+          <div id="one" class="card hidden">
+            <h1 id="name">f</h1>
+            <div id="backup">
+              <img
+                id="picture"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed"></p>
+            <p id="gender"></p>
+            <p id="location"></p>
+            <a id="url" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="second grid">
+          <div id="two" class="card hidden">
+            <h1 id="name2">f</h1>
+            <div id="backup2">
+              <img
+                id="picture2"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed2"></p>
+            <p id="gender2"></p>
+            <p id="location2"></p>
+            <a id="url2" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="third grid">
+          <div id="three" class="card hidden">
+            <h1 id="name3">f</h1>
+            <div id="backup3">
+              <img
+                id="picture3"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed3"></p>
+            <p id="gender3"></p>
+            <p id="location3"></p>
+            <a id="url3" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="fourth grid">
+          <div id="four" class="card hidden">
+            <h1 id="name4">f</h1>
+            <div id="backup4">
+              <img
+                id="picture4"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed4"></p>
+            <p id="gender4"></p>
+            <p id="location4"></p>
+            <a id="url4" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="fifth grid">
+          <div id="five" class="card hidden">
+            <h1 id="name5">f</h1>
+            <div id="backup5">
+              <img
+                id="picture5"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed5"></p>
+            <p id="gender5"></p>
+            <p id="location5"></p>
+            <a id="url5" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="sixth grid">
+          <div id="six" class="card hidden">
+            <h1 id="name6">f</h1>
+            <div id="backup6">
+              <img
+                id="picture6"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed6"></p>
+            <p id="gender6"></p>
+            <p id="location6"></p>
+            <a id="url6" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="seventh grid">
+          <div id="seven" class="card hidden">
+            <h1 id="name7">f</h1>
+            <div id="backup7">
+              <img
+                id="picture7"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed7"></p>
+            <p id="gender7"></p>
+            <p id="location7"></p>
+            <a id="url7" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+        <div class="eighth grid">
+          <div id="eight" class="card hidden">
+            <h1 id="name8">f</h1>
+            <div id="backup8">
+              <img
+                id="picture8"
+                alt="Potential Pet"
+                src="https://docs.google.com/drawings/d/e/2PACX-1vSAPQdNyag5Bc3F0BToLMoFO6M2BQHDTm1R44leH0hRXRHoTHVC009jt8tGt4tIvcSV-9IrPp6v5kl6/pub?w=852&h=711"
+              />
+            </div>
+            <p id="breed8"></p>
+            <p id="gender8"></p>
+            <p id="location8"></p>
+            <a id="url8" href="https://www.petfinder.com/"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="client.js"></script>
+  </body>
+</html>
