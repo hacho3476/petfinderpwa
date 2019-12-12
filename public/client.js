@@ -12,12 +12,19 @@ var extra =
 
 function getInformation() {
   var type = document.getElementById("animal").value;
-  fetch("animals/" + type)
+    var size = document.getElementById("size").value;
+  fetch("animals/" + type + size)
+    .then(resp => resp.json()) // Transform the data into json
+    .then(data => {})
+    .catch(function(error) {
+      console.log("Error with Pet Finder API: " + error)
+    });
+    /*fetch("animals/" + size)
     .then(resp => resp.json()) // Transform the data into json
     .then(data => {})
     .catch(function(error) {
       //console.log("Error with Pet Finder API: " + error)
-    });
+    });*/
   fetch("/animals")
     .then(resp => resp.json()) // Transform the data into json
     .then(data => {
